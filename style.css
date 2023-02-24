@@ -1,0 +1,249 @@
+:root{
+    --main-color: #3b2f61;
+    --lighter-color: #7c7495;
+    --brighter-color: #6d40fd;
+    --medium-color: #5733ca;
+
+
+    /* text color */
+    --text-dark: #3F3846;
+    --text-medium: #5E556B;
+    --text-light: #8D8894;
+
+    /* font size */
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.3rem;
+    --h3-font-size: 1.10rem;
+    --normal-font-size: .940rem;
+    --small-font-size: .820rem;
+    --xsmall-font-size: .80rem;
+
+    /* font-weight */
+    --medium-bold: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    margin:3rem 0 0 0;
+    height: 100%
+
+}
+/* -------nav menu------- */
+
+.nav-list{
+    list-style-type: none;
+    padding: 0;
+    line-height: 2;
+}
+.nav-list a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+#name{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: var(--semi-bold);
+    padding: 5px;
+}
+header{
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--main-color);
+}
+.whole-nav{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu{
+    position:fixed;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    transition: .5s;
+}
+.close-icon{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer;
+}
+.nav-icon{
+    cursor: pointer;
+}
+.moon-icon{
+    cursor: pointer;
+}
+.show{
+    left: 0;
+}
+
+/* ---Home Section--- */
+.home-container{
+    height: calc(100vh - 3rem);
+}
+#home-content{
+    display: flex;
+    height: calc(100% - 49.5px);
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+#main-img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#main-img img{
+    width: 170px;
+    height: 100%;
+    display: block;
+    margin: 0;
+}
+#home-content h1{
+    color: var(--main-color);
+    margin-bottom: 7px;
+    font-size: 1.85rem;
+    font-weight: bolder;
+}
+#home-content h3{
+    margin: 0;
+    color: var(--text-light);
+    font-size: var(--h3-font-size);
+}
+#arrow-icon{
+    text-align: center;
+}
+#arrow-icon a{
+    cursor: pointer;
+}
+.links{
+    list-style-type: none;
+    display: flex;
+    padding: 0%;
+}
+.links .bx{
+    padding: 5px;
+    font-size: x-large;
+}
+
+/* --- About Section--- */
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 3rem);
+    justify-content: center;
+}
+.title{
+    font-size: var(--normal-font-size);
+    color: var(--text-medium);
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+#about-title::after{
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 0.20rem;
+    margin: auto;
+    left:0;
+    right:0;
+    top:3.3rem;
+    background-color: #b6a0fe;
+}
+#about-title{
+    position: relative;
+    font-size: 2.5rem;
+    color: #5733ca;
+    margin-bottom: 1.25rem;
+    margin-top: 0.25rem;
+}
+.about-content h1{
+    color:var(--text-medium);
+    margin: 1rem 1.3rem 0 1.3rem;
+}
+#about-name{
+    color: #6d40fd;
+}
+#about-job{
+    font-style: italic;
+}
+.about-content p{
+    margin: 10px 45px 25px;
+    line-height: 1.75;
+}
+.about-content img{
+    width: 225px;
+    height: 265px;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 30px;
+    border: 5px solid var(--lighter-color);
+}
+
+
+
+
+
+
+
+
+@media (min-width: 995px) {
+    /* ---media query for home--- */
+    body{
+        padding-left: calc(20% + 3rem + 3rem);
+    }
+    .nav-icon, .close-icon{
+        display:none;
+    }
+    .nav-menu{
+        left: 0;
+        width: 20%;
+    }
+    .whole-nav{
+        justify-content: flex-end;
+    }
+    header{
+        background-color: whitesmoke;
+    }
+    #name{
+        color:var(--main-color);
+        font-size: var(--h3-font-size);
+    }
+    .bx-moon{
+        color: var(--main-color) !important;
+        font-size: large;
+        font-weight: 600;
+    }
+    /* ---about section--- */
+    .about-content p{
+        margin: 2rem 4rem 4rem 4rem;
+        line-height: 1.8;
+    }
+    .title{
+        margin-bottom: 2rem;
+    }
+
+}
