@@ -14,7 +14,7 @@
     <title>Moon's Portfolio</title>
 </head>
 <body>
-    <!-- nav menu -->
+    <!-- <============================================ nav menu ============================================> -->
     <header>
         <div class="whole-nav">
             <div class="nav-icon">
@@ -38,34 +38,139 @@
              </div>
         </div>
     </header>
-    <!-- Home Section -->
+    <!-- <============================================ Home Section ============================================> -->
     <section id="Home">
         <div class="home-container">
             <div id="home-content">
-                <div id="main-img">
-                    <img src="./imgs/Screenshot 2023-02-23 at 4.23.33 PM.png">
+                <div id="home-center">
+                    <div id="main-img">
+                        <img src="./imgs/Screenshot 2023-02-23 at 4.23.33 PM.png">
+                    </div>
+                    <h1 id="main-text">Welcome</h1>
+                    <h3>Feel free to look around!</h3>
+                    <ul class="links">
+                        <li><a href="#"><i class='bx bxl-github' style='color:#3b2f61'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-linkedin' style='color:#3b2f61'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-instagram' style='color:#3b2f61'></i></a></li>
+                    </ul>
                 </div>
-                <h1 id="main-text">Welcome</h1>
-                <h3>Feel free to look around!</h3>
-                <ul class="links">
-                    <li><a href="#"><i class='bx bxl-github' style='color:#3b2f61'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-linkedin' style='color:#3b2f61'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-instagram' style='color:#3b2f61'></i></a></li>
-                </ul>
-            </div>
-            <div id="arrow-icon">
-                <a href="#About"><i class='bx bx-chevrons-down bx-flashing bx-lg' style='color:#3b2f61'></i></a>
+                <div id="arrow-icon">
+                    <a href="#About"><i class='bx bx-chevrons-down bx-flashing bx-lg' style='color:#3b2f61'></i></a>
+                </div>
             </div>
         </div>
     </section>
-    <!-- About Section  -->
+    <!-- <=========================================== About Section  ============================================> -->
     <section id="About">
         <div class="about-content">
-            <h3 class="title">My Story</h3>
-            <h1 id="about-title">About Me</h1>
-            <h1>I am <span id="about-name">Moonjoo</span>, a <span id="about-job">Software Engineer.</span></h1>
+            <h3 class="section-subtitle">My Story</h3>
+            <h1 class="section-title">About Me</h1>
+            <h1 id="intro">I am <span id="about-name">Moonjoo</span>, a <span id="about-job">Software Engineer.</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit dolorum nobis eum minima ipsa iste porro repellendus id omnis quae, laborum deleniti natus, reiciendis in expedita repudiandae. Exercitationem, animi voluptatum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit dolorum nobis eum minima ipsa iste porro repellendus id omnis quae, laborum deleniti natus, reiciendis in expedita repudiandae. Exercitationem, animi voluptatum?</p>
             <img src="./imgs/Screenshot 2023-02-24 at 1.27.20 AM.png">
+        </div>
+    </section>
+    <!-- ============================================= Skills Section ============================================= -->
+    <section id="Skills">
+        <div id="skills-top">
+            <h3 class="section-subtitle">My Expertise</h3>
+            <h1 class="section-title">Skills</h1>
+        </div>
+        <!---------------------frontend skills---------------------->
+        <div class="skills-content">
+            <div class="skills-header front">
+                <div class="skills-right">
+                    <i class='skills-icon bx bx-code-curly bx-md' style='color:#3b2f61'></i>
+                    <h1 class="skills-heading">Frontend Development</h1>
+                </div>
+                <i class='skills-icon skills-arrow bx bx-chevron-down bx-sm' style='color:#3b2f61'></i>
+            </div>
+            <div class="skills-list" id="skills-front">
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">HTML</h3>
+                        <span class="skills-percent">90%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill skills-html"></span>
+                    </div>
+                </div>
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">CSS</h3>
+                        <span class="skills-percent">88%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill skills-css"></span>
+                    </div>
+                </div>
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">JavaScript</h3>
+                        <span class="skills-percent">85%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill skills-js"></span>
+                    </div>
+                </div>
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">Jquery</h3>
+                        <span class="skills-percent">80%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill skills-jquery"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------backend skills---------------------->
+        <div class="skills-content" id="skills-content-back">
+            <div class="skills-header back">
+                <div class="skills-right">
+                    <i class='skills-icon bx bx-desktop bx-md' style='color:#3b2f61'></i>
+                    <h1 class="skills-heading">Backend Development</h1>
+                </div>
+                <i class='skills-icon skills-arrow bx bx-chevron-down bx-sm' style='color:#3b2f61'></i>
+            </div>
+            <div class="skills-list" id="skills-back">
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">Python</h3>
+                        <span class="skills-percent">90%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill"></span>
+                    </div>
+                </div>
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">CSS</h3>
+                        <span class="skills-percent">90%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill"></span>
+                    </div>
+                </div>
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">JavaScript</h3>
+                        <span class="skills-percent">90%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill"></span>
+                    </div>
+                </div>
+                <div class="skills-detail">
+                    <div class="skills-title">
+                        <h3 class="skills-name">Jquery</h3>
+                        <span class="skills-percent">90%</span>
+                    </div>
+                    <div class="skills-bar">
+                        <span class="skills-fill"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>

@@ -1,6 +1,7 @@
 :root{
     --main-color: #3b2f61;
     --lighter-color: #7c7495;
+    --lightest-color: #E7E2F7;
     --brighter-color: #6d40fd;
     --medium-color: #5733ca;
 
@@ -24,15 +25,42 @@
     --bold: 700;
     
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
     background-color: whitesmoke;
     margin:3rem 0 0 0;
-    height: 100%
-
+    height: 100%;
 }
-/* -------nav menu------- */
+.section-subtitle{
+    font-size: var(--normal-font-size);
+    color: var(--text-medium);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 65px;
+    height: 0.20rem;
+    margin: auto;
+    left:0;
+    right:0;
+    top:2.5rem;
+    background-color: #b6a0fe;
+}
+.section-title{
+    position: relative;
+    font-size: var(--h1-font-size);
+    color:black;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+/*  ============================================= nav menu =============================================  */
 
 .nav-list{
     list-style-type: none;
@@ -43,6 +71,9 @@ body{
     text-decoration: none;
     color: whitesmoke;
     cursor: pointer;
+}
+.nav-list a:hover{
+    color: var(--lighter-color);
 }
 #name{
     color: whitesmoke;
@@ -95,27 +126,38 @@ header{
     left: 0;
 }
 
-/* ---Home Section--- */
-.home-container{
+/* ===================================== Home Section ========================================= */
+#Home{
     height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.home-container{
+    height: 100%;
 }
 #home-content{
     display: flex;
-    height: calc(100% - 49.5px);
+    height: 100%;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-#main-img{
+#home-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 27%
+}
+#main-img img{
     width: 170px;
     height: 170px;
     border-radius: 50%;
     overflow: hidden;
-}
-#main-img img{
-    width: 170px;
-    height: 100%;
     display: block;
     margin: 0;
 }
@@ -132,6 +174,7 @@ header{
 }
 #arrow-icon{
     text-align: center;
+    padding-bottom: 2rem;
 }
 #arrow-icon a{
     cursor: pointer;
@@ -146,42 +189,24 @@ header{
     font-size: x-large;
 }
 
-/* --- About Section--- */
+
+/* ========================================== About Section ========================================== */
+#About{
+    padding-top: 3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 .about-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: calc(100vh - 3rem);
     justify-content: center;
+    height: 100%;
 }
-.title{
-    font-size: var(--normal-font-size);
-    color: var(--text-medium);
-    margin-top: 1.5rem;
-    font-weight: 500;
-}
-#about-title::after{
-    position: absolute;
-    content: "";
-    width: 80px;
-    height: 0.20rem;
-    margin: auto;
-    left:0;
-    right:0;
-    top:3.3rem;
-    background-color: #b6a0fe;
-}
-#about-title{
-    position: relative;
-    font-size: 2.5rem;
-    color: #5733ca;
-    margin-bottom: 1.25rem;
-    margin-top: 0.25rem;
-}
-.about-content h1{
+#intro{
     color:var(--text-medium);
-    margin: 1rem 1.3rem 0 1.3rem;
+    margin: 0.3rem 1.3rem 0 1.3rem;
+    font-size: var(--h2-font-size);
 }
 #about-name{
     color: #6d40fd;
@@ -190,12 +215,13 @@ header{
     font-style: italic;
 }
 .about-content p{
-    margin: 10px 45px 25px;
+    margin: 10px 25px 25px;
     line-height: 1.75;
+    font-size: var(--normal-font-size);
 }
 .about-content img{
-    width: 225px;
-    height: 265px;
+    width: 200px;
+    height: 240px;
     border-radius: .5rem;
     overflow: hidden;
     display: block;
@@ -203,15 +229,130 @@ header{
     border: 5px solid var(--lighter-color);
 }
 
+ /* ========================================== Skills Section ========================================== */
+ #Skills{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+ #skills-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:2rem;
+}
+.skills-content{
+    margin-left: 15px; 
+}
+#skills-content-back{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.skills-header{
+    display:flex; 
+    margin-top: 10px;
+    margin-bottom: 30px; 
+    justify-content: space-between;
+    cursor: pointer;
+}
+.skills-right{
+    display: flex;
+}
+.skills-icon{
+    height: 40px;
+}
+.skills-detail{
+    margin: 0 1.8rem 1.5rem 2rem;
+}
+.skills-heading{
+    margin: 5px 20px 0 15px;
+    font-size: 1.2rem;
+    color: var(--text-medium);
+}
+.skills-title{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.skills-arrow{
+    margin-right: 1.7rem;
+    height: 30px;
+    margin-top: 8px;
+}
+.skills-name{
+    font-size: var(--h3-font-size);
+    margin: 0;
+}
+.skills-percent{
+    font-size: var(--normal-font-size);
+    height: 26.5px;
+}
+.skills-bar, .skills-fill{
+    height:5px;
+    border-radius: .25rem;
+}
+.skills-bar{
+    background-color: #E7E2F7;
+}
+.skills-fill{
+    display: block;
+    background-color: var(--main-color);
+}
+.skills-html{
+    width: 90%;
+}
+.skills-css{
+    width:88%;
+}
+.skills-js{
+    width:85%;
+}
+.skills-jquery{
+    width:80%;
+}
+#skills-back{
+    display: none;
+}
 
 
 
-
+@media (min-height: 950px) {
+    .about-content h3{
+        margin-bottom: 7px;
+    }
+    .about-content .section-title{
+        margin: 1.5rem 0 2rem 0;
+    }
+    .about-content p{
+        margin-top: 1.5rem;
+        margin-bottom: 2rem
+    }
+    #About{
+        padding-top:4rem;
+    }
+    #skills-top h1{
+        margin-top: 1rem;
+    }
+    .front{
+        margin-top: 1.5rem;
+    }
+    .skills-detail{
+        margin-bottom: 2rem;
+    }
+    .skills-content{
+        margin-bottom: 2.5rem;
+    }
+}
 
 
 
 @media (min-width: 995px) {
-    /* ---media query for home--- */
+    .section-title{
+        font-size: 2rem;
+    }
+    .section-subtitle{
+        font-size: var(--h3-font-size);
+    }
+    /* ========================================== media query for home ========================================== */
     body{
         padding-left: calc(20% + 3rem + 3rem);
     }
@@ -237,13 +378,60 @@ header{
         font-size: large;
         font-weight: 600;
     }
-    /* ---about section--- */
+    .nav-list li{
+        font-size: var(--h3-font-size);
+        padding: 3px;
+    }
+    #main-text{
+        font-size: 2rem !important;
+    }
+    #main-img img{
+        width: 200px;
+        height: 200px;
+    }
+    #home-center h3{
+        font-size: 1.2rem;
+    }
+    .links .bx{
+        padding: 7px;
+        font-size: 1.6rem;
+    }
+    /* ================================================ about section ========================================== */
     .about-content p{
-        margin: 2rem 4rem 4rem 4rem;
-        line-height: 1.8;
+        margin: 2rem 5rem 4rem 5em;
+        line-height: 1.85;
+        font-size: var(--h3-font-size);
     }
     .title{
         margin-bottom: 2rem;
     }
+    #intro{
+        font-size: 1.6rem;
+    }
+    .about-content img{
+        width: 250px;
+        height: 300px;
+    }
 
+    /* ================================================ Skills section ========================================== */
+    .skills-content{
+        margin: 2.5rem 4rem;
+    }
+    .skills-detail{
+        margin: 2.5rem;
+    }
+    .skills-bar, .skills-fill{
+        height:7px;
+        border-radius: .25rem;
+    }
+    .skills-heading{
+        font-size: 1.5rem;
+        margin-top:2px;
+    }
+    .skills-icon{
+        font-weight: 700;
+    }
+    #skills-content-back{
+        padding-bottom: 1.5rem;
+    }
 }
