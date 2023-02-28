@@ -315,6 +315,86 @@ header{
 
 
 
+/* ================================================== Projects Section =================================================== */
+#Projects{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.project-img img{
+    position: relative;
+    width: 300px;
+    height: 215px;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    border: 5px solid var(--lighter-color);
+}
+.project-img{
+    position: relative;
+    overflow: hidden;
+}
+.button{
+    display: none;
+}
+#projects-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+.link-popup{
+    cursor: pointer;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    backdrop-filter: blur(7px);
+    transition: .4s;
+}
+.project-img:hover .link-popup{
+    bottom: 0;
+}
+.link-popup a {
+    text-decoration: none;
+    font-size: var(--h2-font-size);
+    font-weight: bolder;
+    color: var(--main-color);
+}
+/* --------------------------------------------- Contact Section ----------------------------------------------- */
+#contact-content{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    margin: 0 2rem 2rem;
+    height: 17rem;
+    position: relative;
+}
+#contact-content h1{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.7rem;
+    color: whitesmoke;
+}
+#contact-content h3{
+    font-size: var(--small-font-size);
+    position: absolute;
+    color: var(--lightest-color);
+    font-weight: 400;
+    width: 44%;
+    top: 5rem;
+    left: 1.7rem
+}
+#contact-button{
+    position: absolute;
+    bottom: 1rem;
+    left: 1.7rem;
+}
+
+/* ======================================== medi query =================================== */
 @media (min-height: 950px) {
     .about-content h3{
         margin-bottom: 7px;
@@ -342,19 +422,6 @@ header{
         margin-bottom: 2.5rem;
     }
 }
-
-/* ================================================== Projects Section =================================================== */
-#imgs-carousel img{
-    width: 250px;
-    height: 190px;
-    border-radius: .5rem;
-    overflow: hidden;
-    display: block;
-    margin-bottom: 30px;
-    border: 5px solid var(--lighter-color);
-}
-
-
 
 @media (min-width: 995px) {
     .section-title{
@@ -445,4 +512,24 @@ header{
     #skills-content-back{
         padding-bottom: 1.5rem;
     }
+    /* ==================================== Projects Section =================================== */
+    .button{
+        display: block;
+        cursor: pointer;
+    }
+    #projects-content{
+        flex-direction: row;
+    }
+    #img2, #img3, #img4{
+        display: none;
+    }
+    #imgs-carousel{
+        margin: 0 2rem 0 2rem;
+    }
+    .project-img img{
+        width: 500px;
+        height: 415px;
+        margin-top: 2rem;
+    }
+
 }
