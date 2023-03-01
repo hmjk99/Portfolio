@@ -57,4 +57,12 @@ $(()=>{
         }
         $content.eq(currentImgIndex).css('display', 'block')
     })
+
+    // --------for modal--------//
+    $('.open-modal').on('click', ()=>{
+        $('#modal').css('display', 'flex')
+    })
+    $('.close-modal').on('click', ()=>{
+        $('#modal').css('display', 'none')
+    })
 })

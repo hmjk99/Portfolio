@@ -49,9 +49,9 @@
                     <h1 id="main-text">Welcome</h1>
                     <h3>Feel free to look around!</h3>
                     <ul class="links">
-                        <li><a href="#"><i class='bx bxl-github' style='color:#3b2f61'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-linkedin' style='color:#3b2f61'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-instagram' style='color:#3b2f61'></i></a></li>
+                        <li><a href="https://github.com/hmjk99" target="_blank"><i class='bx bxl-github' style='color:#3b2f61'></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/moonjookim/" target="_blank"><i class='bx bxl-linkedin' style='color:#3b2f61'></i></a></li>
+                        <li><a href="#" target="_blank"><i class='bx bxl-instagram' style='color:#3b2f61'></i></a></li>
                     </ul>
                 </div>
                 <div id="arrow-icon">
@@ -219,13 +219,26 @@
         <div class="heading-top">
             <h1 class="section-title">Contact Me</h3>
         </div>
-        <div id="contact-content">
-             <h1>Do you have a project in mind?</h1>
-             <h3>Do not hesitate and reach out to me if you have any project in mind where my skills can be applied. Please fill out the contact form below. Thank you.
-             </h3>
-             <div>
-                <button id="contact-button">Contact Me</button>
-             </div>
+        <div id="content-inside">
+            <div id="contact-content">
+                <h1>Do you have a project in mind?</h1>
+                <h3>Do not hesitate and please reach out if you have any project in mind where my skills can help. Please fill out the contact form below. Thank you.
+                </h3>
+                <div>
+                   <button class="contact-button open-modal">Contact Me</button>
+                </div>
+           </div>
+           <img id="contact-img" src="./imgs/pexels-photo-378427-removebg-preview-removebg-preview.png" alt="">
+        </div>
+        <div id="modal">
+            <span class="close-modal" id="close-button-modal"><i class='bx bx-x bx-sm' style="color:whitesmoke"></i></span>
+            <div id="upper-info">
+                <input type="text" placeholder="Name" class="modal-info upper-info">
+                <input type="email" placeholder="Email" class="modal-info upper-info email-info">
+            </div>
+            <input type="text" placeholder="Project Name" class="modal-info">
+            <textarea cols="0" rows="10" placeholder="Detailed Information" class="modal-text"></textarea>
+            <input type="submit" value="Submit Form" class="contact-button close-modal" id="submit-modal">
         </div>
     </section>
 </body>
