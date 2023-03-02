@@ -31,9 +31,6 @@
     --bold: 700;
     
 }
-html{
-    scroll-behavior: smooth;
-}
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -203,13 +200,6 @@ header{
     margin: 0;
     color: var(--text-light);
     font-size: var(--h3-font-size);
-}
-#arrow-icon{
-    text-align: center;
-    padding-bottom: 2rem;
-}
-#arrow-icon a{
-    cursor: pointer;
 }
 .links{
     list-style-type: none;
