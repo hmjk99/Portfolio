@@ -4,9 +4,15 @@
     --lightest-color: #E7E2F7;
     --brighter-color: #6d40fd;
     --medium-color: #5733ca;
+    --background-color: whitesmoke;
+    --titlebar-color: #b6a0fe;
+    --title-color:black; 
+    --skills-bar-color:  #3b2f61;
+    --contact-content-color: #3b2f61;
 
 
     /* text color */
+    --text-black: black;
     --text-dark: #3F3846;
     --text-medium: #5E556B;
     --text-light: #8D8894;
@@ -30,7 +36,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
     margin:3rem 0 0 0;
     height: 100%;
 }
@@ -50,12 +56,12 @@ body{
     left:0;
     right:0;
     top:2.5rem;
-    background-color: #b6a0fe;
+    background-color: var(--titlebar-color);
 }
 .section-title{
     position: relative;
     font-size: var(--h1-font-size);
-    color:black;
+    color:var(--title-color);
     margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
@@ -66,6 +72,25 @@ body{
     justify-content: center;
     margin-top:2rem;
 }
+.dark-icon{
+    color: var(--main-color)
+}
+.darkmode{
+    --main-color: whitesmoke;
+    --background-color: #2f264e;
+    --title-color:whitesmoke; 
+    --skills-bar-color:  #5733ca;
+    --contact-content-color: #7c7495;
+
+
+    /* text color */
+    --text-black: whitesmoke;
+    --text-medium: #E7E2F7;
+}
+.dark-border{
+    border: 3px solid var(--main-color);
+}
+
 
 /*  ============================================= nav menu =============================================  */
 
@@ -95,7 +120,7 @@ header{
     left: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: var(--main-color);
+    background-color: #3b2f61;
 }
 .whole-nav{
     margin-left: 1rem;
@@ -114,7 +139,7 @@ header{
     padding: 2rem 3rem;
     display: flex;
     align-items: center;
-    background-color: var(--main-color);
+    background-color: #3b2f61;
     transition: .5s;
 }
 .close-icon{
@@ -160,7 +185,7 @@ header{
     position: relative;
     top: 27%
 }
-#main-img img{
+#main-img{
     width: 170px;
     height: 170px;
     border-radius: 50%;
@@ -216,7 +241,7 @@ header{
     font-size: var(--h2-font-size);
 }
 #about-name{
-    color: #6d40fd;
+    color: var(--brighter-color)
 }
 #about-job{
     font-style: italic;
@@ -225,6 +250,7 @@ header{
     margin: 10px 25px 25px;
     line-height: 1.75;
     font-size: var(--normal-font-size);
+    color: var(--text-black);
 }
 .about-content img{
     width: 200px;
@@ -281,21 +307,23 @@ header{
 .skills-name{
     font-size: var(--h3-font-size);
     margin: 0;
+    color: var(--text-black);
 }
 .skills-percent{
     font-size: var(--normal-font-size);
     height: 26.5px;
+    color: var(--text-black);
 }
 .skills-bar, .skills-fill{
     height:5px;
     border-radius: .25rem;
 }
 .skills-bar{
-    background-color: #E7E2F7;
+    background-color: var(--lightest-color);
 }
 .skills-fill{
     display: block;
-    background-color: var(--main-color);
+    background-color: var(--skills-bar-color);
 }
 .skills-html{
     width: 90%;
@@ -362,11 +390,11 @@ header{
     text-decoration: none;
     font-size: var(--h2-font-size);
     font-weight: bolder;
-    color: var(--main-color);
+    color:  #3b2f61;
 }
 /* --------------------------------------------- Contact Section ----------------------------------------------- */
 #content-inside{
-    background-color: var(--main-color);
+    background-color: var(--contact-content-color);
     border-radius: 10px;
     margin: 1.5rem 1.7rem 2rem;
     height: 20rem;
@@ -385,7 +413,7 @@ header{
 #contact-content h1{
     font-size: 1.5rem;
     margin: 0 1.2rem;
-    color: whitesmoke;
+    color: var(--background-color);
 }
 #contact-content h3{
     font-size: var(--small-font-size);
@@ -396,7 +424,7 @@ header{
 }
 .contact-button{
     margin: 0 1.2rem;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
     color:var(--main-color);
     font-weight: 600;
     font-size:var(--h3-font-size);
@@ -412,7 +440,7 @@ header{
     border: none;
 }
 ::placeholder{
-    color:var(--main-color);
+    color:#2f264e;
     font-size: var(--normal-font-size);
     font-family: 'Poppins', sans-serif;
     padding-left: 3px;
@@ -599,7 +627,7 @@ header{
         justify-content: flex-end;
     }
     header{
-        background-color: whitesmoke;
+        background-color: var(--background-color);
     }
     #name{
         color:var(--main-color);

@@ -65,4 +65,10 @@ $(()=>{
     $('.close-modal').on('click', ()=>{
         $('#modal').css('display', 'none')
     })
+
+    // -------- dark mode -------//
+    $('.dark-button').on('click', ()=>{
+        $('body').toggleClass('darkmode')
+        $('#main-img').toggleClass('dark-border')
+    })
 })
