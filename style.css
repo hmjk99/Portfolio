@@ -9,6 +9,7 @@
     --title-color:black; 
     --skills-bar-color:  #3b2f61;
     --contact-content-color: #3b2f61;
+    --box-shadow: #acacac;
     /* #bab4c8 */
 
     /* text color */
@@ -88,11 +89,13 @@ body{
     --title-color:whitesmoke; 
     --skills-bar-color:  #5733ca;
     --contact-content-color: #7c7495;
+    --box-shadow: white;
 
 
     /* text color */
     --text-black: whitesmoke;
     --text-medium: #E7E2F7;
+    --text-light: #c2b0ff;
 }
 .dark-border{
     border: 3px solid var(--main-color);
@@ -127,7 +130,7 @@ header{
     left: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: var(--main-color);
+    background-color: #4f416e;
 }
 .whole-nav{
     margin-left: 1rem;
@@ -180,10 +183,10 @@ header{
     align-items: center;
     justify-content: flex-end;
 }
-#home-p {
-    text-align: center;
-    margin: 0.5rem 2rem;
-    color: var(--text-medium)
+#home-left, #home-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #main-text {
     margin: 1.7rem 0 0;
@@ -285,7 +288,7 @@ header{
     font-size: var(--normal-font-size);
     color: var(--text-black);
     border-radius: 15px;
-    box-shadow: 5px 5px 8px 5px #acacac;
+    box-shadow: 5px 5px 8px 5px var(--box-shadow);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -379,7 +382,7 @@ header{
 }
 .skills-fill{
     display: block;
-    background-color: var(--main-color);
+    background-color: #9080b4;
 }
 .skills-html{
     width: 95%;
@@ -444,11 +447,15 @@ header{
     margin-bottom: 0.5rem;
 }
 .project-descrip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width:18rem;
-    box-shadow: 5px 5px 8px 5px #acacac;
+    box-shadow: 5px 5px 8px 5px var(--box-shadow);
     margin: 0 0 1.5rem;
     border-radius: 15px;
+    color: var(--text-black);
 }
 #projects-content{
     margin-top: 1.7rem;
@@ -580,6 +587,12 @@ header{
 
 /* ======================================== medi query =================================== */
 @media (min-height: 950px) {
+    #arrow-icon{
+        padding-bottom: 5rem
+    }
+    .links{
+        padding-bottom:2rem
+    }
     .about-content h3{
         margin-bottom: 7px;
     }
@@ -612,11 +625,14 @@ header{
     .section-subtitle{
         font-size: var(--h3-font-size);
     }
+    .nav-menu{
+        width: 25%
+    }
     /* ----------- about section ----------- */
-    .about-content p{
-        margin: 1rem 3.5rem;
+    #about-p p, #fun-fact{
         line-height: 1.85;
         font-size: var(--h3-font-size);
+        padding: 0.5rem 3rem 1rem
     }
     .title{
         margin-bottom: 2rem;
@@ -644,15 +660,12 @@ header{
     }
 
     /* ------------- projects section ------- */
-    #imgs-carousel{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-    }
-    .project-img{
+    .project-img, .project-descrip{
         margin: 0 1.5rem 2rem;
+    }
+    #projects-content{
+        flex-direction: row;
+        flex-wrap: wrap
     }
 
     /* ------------ contact section --------- */
@@ -680,9 +693,11 @@ header{
     }
     #contact-img{
         display: block;
-        height: 200px;
+        height: 22rem;
+        width:15rem;
         align-self: center;
         margin-right: 1.5rem;
+        object-fit: cover;
     }
     #modal{
         width: 510px;
@@ -706,48 +721,10 @@ header{
         font-size: var(--h2-font-size);
     }
     /* ========================================== media query for home ========================================== */
-    /* body{
-        padding-left: calc(20% + 3rem + 3rem);
-    } */
-    /* .nav-icon, .close-icon{
-        display:none;
-    } */
     .nav-menu{
-        width: 20%;
+        width: 25%;
     }
-    /* .whole-nav{
-        justify-content: flex-end;
-    } */
-    /* header{
-        background-color: var(--background-color);
-    }
-    #name{
-        color:var(--main-color);
-        font-size: var(--h3-font-size);
-    }
-    .bx-moon{
-        color: var(--main-color) !important;
-        font-size: large;
-        font-weight: 600;
-    }
-    .nav-list li{
-        font-size: var(--h3-font-size);
-        padding: 3px;
-    }
-    #main-text{
-        font-size: 2rem !important;
-    }
-    #main-img img{
-        width: 200px;
-        height: 200px;
-    }
-    #home-center h3{
-        font-size: 1.2rem;
-    }
-    .links .bx{
-        padding: 7px;
-        font-size: 1.6rem;
-    } */
+    
     /* ================================================ about section ========================================== */
     .about-content p{
         margin: 1rem 5rem;
@@ -787,27 +764,85 @@ header{
         padding-bottom: 1.5rem;
     }
     /* ==================================== Projects Section =================================== */
-    .button{
-        display: block;
-        cursor: pointer;
-    }
-    #projects-content{
-        flex-direction: row;
-    }
-    #img2, #img3, #img4{
-        display: none;
-    }
-    #imgs-carousel{
-        margin: 0 2rem 0 2rem;
-    }
-    .project-img img{
-        width: 500px;
+    /* .project-img img{
+        width: ;
         height: 415px;
         margin-top: 2rem;
-    }
+    } */
     /* -------------------- contact ------------------ */
     #contact-content{
         width: 70%;
     }
 
+}
+@media (min-width: 1015px) {
+    .project-img img, .project-descrip{
+        width: 30rem;
+        height: 25rem;
+    }
+    .project-img, .project-descrip{
+        margin: 2rem 2rem
+    }
+    .project-descrip p{
+        margin: 0;
+        padding: 2rem;
+        line-height: 2;
+    }
+    #about-p, #fun-fact{
+        width: 50rem;
+        padding: 0
+    }
+    #Skills, #About{
+        width: 75rem
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75rem
+    }
+    #home-left, #home-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5rem 2rem
+    }
+    #home-main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+    }
+    #main-text{
+        margin-top: 1rem;
+        font-size: 2.3rem;
+    }
+    .links{
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 6rem
+    }
+    #main-img{
+        width: 18rem;
+        height: 18rem
+    }
+    #sub-text{
+        font-size: 2rem
+    }
+    #hashtags li{
+        font-size: 1.4rem;
+        padding: 0.3rem
+    }
+    #hashtags{
+        margin-bottom: 0
+    }
+    .links .bx{
+        font-size: 2.2rem;
+    }
 }
