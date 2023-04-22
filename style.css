@@ -1,15 +1,15 @@
 :root{
-    --main-color: #3b2f61;
+    --main-color: #4f416e;
     --lighter-color: #7c7495;
     --lightest-color: #E7E2F7;
     --brighter-color: #6d40fd;
     --medium-color: #5733ca;
-    --background-color: whitesmoke;
+    --background-color: white;
     --titlebar-color: #b6a0fe;
     --title-color:black; 
     --skills-bar-color:  #3b2f61;
     --contact-content-color: #3b2f61;
-
+    /* #bab4c8 */
 
     /* text color */
     --text-black: black;
@@ -38,6 +38,12 @@ body{
     margin:3rem 0 0 0;
     height: 100%;
 }
+.icon{
+    background: linear-gradient(to right, #74c9d1, #7e79e2, #e374aa, #e7a675);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 .section-subtitle{
     font-size: var(--normal-font-size);
     color: var(--text-medium);
@@ -59,7 +65,10 @@ body{
 .section-title{
     position: relative;
     font-size: var(--h1-font-size);
-    color:var(--title-color);
+    background: linear-gradient(to right, #74c9d1, #7e79e2, #e374aa, #e7a675);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
@@ -118,7 +127,7 @@ header{
     left: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #3b2f61;
+    background-color: var(--main-color);
 }
 .whole-nav{
     margin-left: 1rem;
@@ -132,12 +141,12 @@ header{
     position:fixed;
     top: 0;
     left: -100%;
-    width: 60%;
+    width: 45%;
     height: 100%;
     padding: 2rem 3rem;
     display: flex;
     align-items: center;
-    background-color: #3b2f61;
+    background-color: var(--main-color);
     transition: .5s;
 }
 .close-icon{
@@ -162,34 +171,44 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 2rem;
+    align-items: center;
 }
 .home-container{
-    height: 100%;
-}
-#home-content{
     display: flex;
     height: 100%;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+#home-p {
     text-align: center;
-    justify-content: space-between;
+    margin: 0.5rem 2rem;
+    color: var(--text-medium)
 }
-#home-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 27%
+#main-text {
+    margin: 1.7rem 0 0;
+    background: linear-gradient(to right, #74c9d1, #7e79e2, #e374aa, #e7a675);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
+}
+#sub-text{
+    margin: 0.4rem 0;
+    color: var(--main-color);
+    font-size: 1.3rem;
+    text-align: center;
+}
+#img-div{
+    margin: 0 0 0.5rem;
 }
 #main-img{
-    width: 170px;
-    height: 170px;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     overflow: hidden;
     display: block;
-    margin: 0;
+    object-fit: cover;
 }
 #home-content h1{
     color: var(--main-color);
@@ -212,11 +231,26 @@ header{
 .links{
     list-style-type: none;
     display: flex;
-    padding: 0%;
+    padding: 0 0.2rem 1rem 0;
 }
 .links .bx{
-    padding: 5px;
-    font-size: x-large;
+    margin: 0.3rem 0.7rem;
+    font-size: 1.7rem;
+}
+#hashtags{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: 1rem 1.5rem
+}
+#hashtags li{
+    margin: 0.1rem 0.3rem;
+    font-size: 1.15rem;
+    color: var(--text-light)
 }
 
 
@@ -245,11 +279,20 @@ header{
 #about-job{
     font-style: italic;
 }
-.about-content p{
-    margin: 10px 25px;
+#about-p, #fun-fact{
+    margin: 0.5rem 25px 1.3rem;
     line-height: 1.75;
     font-size: var(--normal-font-size);
     color: var(--text-black);
+    border-radius: 15px;
+    box-shadow: 5px 5px 8px 5px #acacac;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#about-p p{
+    padding: 10px 20px;
+    margin:0
 }
 .about-content img{
     width: 200px;
@@ -257,14 +300,27 @@ header{
     border-radius: .5rem;
     overflow: hidden;
     display: block;
-    margin-bottom: 30px;
+    margin: 20px 30px;
     border: 5px solid var(--lighter-color);
+}
+#fun-fact h3{
+    margin: 0.5rem 0 0;
+    background: linear-gradient(to right, #74c9d1, #7e79e2, #e374aa, #e7a675);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#fun-fact p{
+    padding: 10px 20px;
+    margin:0
+}
+#fun-fact{
+    margin: 0 25px 1.5rem
 }
 
  /* ========================================== Skills Section ========================================== */
  #Skills{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    /* display: none; */
  }
 .skills-content{
     margin-left: 15px; 
@@ -323,7 +379,7 @@ header{
 }
 .skills-fill{
     display: block;
-    background-color: var(--skills-bar-color);
+    background-color: var(--main-color);
 }
 .skills-html{
     width: 95%;
@@ -339,6 +395,9 @@ header{
 }
 .skills-react{
     width:90%;
+}
+.skills-next{
+    width:90%
 }
 #skills-back{
     display: none;
@@ -366,31 +425,39 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%;
     height: 100%;
-    /* display:none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .project-img img{
     position: relative;
-    width: 375px;
-    height: 300px;
-    object-fit: contain;
+    width: 18rem;
+    height: 13rem;
+    object-fit: cover;
     border-radius: .5rem;
     border: 5px solid var(--lighter-color);
 }
 .project-img{
     position: relative;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
-.button{
-    display: none;
+.project-descrip{
+    text-align: center;
+    width:18rem;
+    box-shadow: 5px 5px 8px 5px #acacac;
+    margin: 0 0 1.5rem;
+    border-radius: 15px;
 }
 #projects-content{
+    margin-top: 1.7rem;
+    margin-bottom: 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 1.7rem;
-    margin-bottom: 1.5rem;
 }
 .link-popup{
     cursor: pointer;
@@ -413,6 +480,11 @@ header{
     font-size: var(--h2-font-size);
     font-weight: bolder;
     color:  #3b2f61;
+}
+.project-icon{
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--brighter-color)
 }
 /* --------------------------------------------- Contact Section ----------------------------------------------- */
 #content-inside{
@@ -634,20 +706,19 @@ header{
         font-size: var(--h2-font-size);
     }
     /* ========================================== media query for home ========================================== */
-    body{
+    /* body{
         padding-left: calc(20% + 3rem + 3rem);
-    }
-    .nav-icon, .close-icon{
+    } */
+    /* .nav-icon, .close-icon{
         display:none;
-    }
+    } */
     .nav-menu{
-        left: 0;
         width: 20%;
     }
-    .whole-nav{
+    /* .whole-nav{
         justify-content: flex-end;
-    }
-    header{
+    } */
+    /* header{
         background-color: var(--background-color);
     }
     #name{
@@ -676,7 +747,7 @@ header{
     .links .bx{
         padding: 7px;
         font-size: 1.6rem;
-    }
+    } */
     /* ================================================ about section ========================================== */
     .about-content p{
         margin: 1rem 5rem;
