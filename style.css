@@ -185,6 +185,12 @@ header{
     align-items: center;
     justify-content: center;
 }
+#home-title{
+    background: linear-gradient(to right, #74c9d1, #7e79e2, #e374aa, #e7a675);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 #home-left, #home-right{
     display: flex;
     flex-direction: column;
