@@ -612,7 +612,7 @@ header{
         margin: 12px
     }
     #arrow-icon{
-        padding-bottom: 4rem
+        padding-bottom: 4.5rem
     }
 }
 @media (min-height: 950px) {
@@ -656,6 +656,9 @@ header{
     }
     .nav-menu{
         width: 25%
+    }
+    #arrow-icon{
+        padding-bottom: 4.5rem
     }
     /* ----------- about section ----------- */
     #about-p p, #fun-fact{

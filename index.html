@@ -9,8 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          AOS.init();
+        });
+    </script>
     <title>Moon's Portfolio</title>
 </head>
 <body>
@@ -43,13 +50,13 @@
         <section id="Home">
             <div class="home-container">
                 <div id="home-main">
-                    <div id="home-left">
+                    <div data-aos="fade-right" data-aos-duration="1000" id="home-left">
                         <div id="img-div">
                             <img id="main-img" src="./imgs/IMG_7340-removebg-preview.png">
                         </div>
                         <h1 id="main-text">Welcome!</h1>
                     </div>
-                    <div id="home-right">
+                    <div data-aos="fade-left" data-aos-duration="1000" id="home-right">
                         <h3 id="sub-text">I'm Moonjoo, </br> A Software Developer</h3>
                         <ul id="hashtags">
                             <li>🖥️ Software Engineer</li>
@@ -59,18 +66,18 @@
                         </ul>
                     </div>
                 </div>
-                <ul class="links">
+                <ul data-aos="fade-up" data-aos-duration="1000" class="links">
                     <li><a href="https://github.com/hmjk99" target="_blank"><i class='icon bx bxl-github'></i></a></li>
                     <li><a href="https://www.linkedin.com/in/moonjookim/" target="_blank"><i class='icon bx bxl-linkedin'></i></a></li>
                 </ul>
-                <div id="arrow-icon">
+                <div data-aos="fade-up" data-aos-duration="1000" id="arrow-icon">
                     <a href="#About"><i class='dark-icon bx bx-chevrons-down bx-flashing bx-lg'></i></a>
                 </div>
             </div>
         </section>
         <!-- <=========================================== About Section  ============================================> -->
         <section id="About">
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-up">
                 <h3 class="section-subtitle">My Story</h3>
                 <h1 class="section-title">About Me</h1>
                 <div id="about-p">
