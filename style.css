@@ -36,8 +36,6 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    margin:3rem 0 0 0;
-    height: 100%;
 }
 .icon{
     background: linear-gradient(to right, #74c9d1, #7e79e2, #e374aa, #e7a675);
@@ -103,9 +101,11 @@ body{
 em{
     font-weight: 800;
 }
-#Home{
-    overflow-x: hidden;
-    width: 100%
+#container{
+    margin:3rem 0 0 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 /*  ============================================= nav menu =============================================  */
