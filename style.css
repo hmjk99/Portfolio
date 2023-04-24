@@ -103,6 +103,9 @@ body{
 em{
     font-weight: 800;
 }
+#container{
+    overflow: hidden;
+}
 
 /*  ============================================= nav menu =============================================  */
 
@@ -256,6 +259,20 @@ header{
     margin: 0.1rem 0.3rem;
     font-size: 1.15rem;
     color: var(--text-light)
+}
+/* .first-text{
+    position: relative;
+} */
+.text.sec-text:before{
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    /* height: 100%;
+    width: 100%; */
+    background-color: var(--background-color);
+    border-left: 2px solid var(--lighter-color);
+    animation: animate 4s steps(12) infinite;
 }
 
 
