@@ -599,10 +599,10 @@ header{
     }
     #main-text{
         margin-top:1rem;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     #sub-text{
-        font-size: 1.3rem
+        font-size: 1.1rem
     }
     .links .bx{
         font-size: 1.4rem;
@@ -611,7 +611,7 @@ header{
         padding: 0
     }
     #arrow-icon{
-        padding-bottom: 3rem
+        padding-bottom: 3.5rem
     }
 }
 @media (min-height: 950px) {
