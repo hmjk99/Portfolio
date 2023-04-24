@@ -100,7 +100,9 @@ body{
 .dark-border{
     border: 3px solid var(--main-color);
 }
-
+em{
+    font-weight: 800;
+}
 
 /*  ============================================= nav menu =============================================  */
 
@@ -435,8 +437,8 @@ header{
 }
 .project-img img{
     position: relative;
-    width: 18rem;
-    height: 13rem;
+    width: 19rem;
+    height: 14rem;
     object-fit: cover;
     border-radius: .5rem;
     border: 5px solid var(--lighter-color);
@@ -448,14 +450,20 @@ header{
 }
 .project-descrip{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width:18rem;
     box-shadow: 5px 5px 8px 5px var(--box-shadow);
-    margin: 0 0 1.5rem;
+    margin: 0 0 2rem;
     border-radius: 15px;
     color: var(--text-black);
+    padding: 1rem
+}
+.project-descrip h3{
+    margin: 0.5rem;
+    color: var(--main-color)
 }
 #projects-content{
     margin-top: 1.7rem;
@@ -493,6 +501,21 @@ header{
     margin: 0 1rem;
     color: var(--brighter-color)
 }
+.project-skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 75%
+    
+}
+.project-skills h5{
+    border: 1px solid var(--main-color);
+    padding: 0.3rem;
+    margin: 0.3rem;
+    color: var(--text-light);
+}
+
 /* --------------------------------------------- Contact Section ----------------------------------------------- */
 #content-inside{
     background-color: var(--contact-content-color);
@@ -612,7 +635,7 @@ header{
         margin: 12px
     }
     #arrow-icon{
-        padding-bottom: 4.5rem
+        padding-bottom: 4rem
     }
 }
 @media (min-height: 950px) {
@@ -658,7 +681,7 @@ header{
         width: 25%
     }
     #arrow-icon{
-        padding-bottom: 4.5rem
+        padding-bottom: 4rem
     }
     /* ----------- about section ----------- */
     #about-p p, #fun-fact{
@@ -693,7 +716,11 @@ header{
 
     /* ------------- projects section ------- */
     .project-img, .project-descrip{
-        margin: 0 1.5rem 2rem;
+        margin: 0 1.5rem 4rem;
+    }
+    .project-img img{
+        width: 22rem;
+        height: 16rem
     }
     #projects-content{
         flex-direction: row;
