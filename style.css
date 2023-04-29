@@ -155,7 +155,7 @@ header{
     padding: 2rem 3rem;
     display: flex;
     align-items: center;
-    background-color: var(--main-color);
+    background-color: #4f416e;
     transition: .5s;
 }
 .close-icon{
