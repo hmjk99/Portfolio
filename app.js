@@ -1,4 +1,8 @@
 
+function sendEmail() {
+    window.location.href = "mailto:hmjk99@gmail.com";
+}
+
 $(()=>{
     // --------menu toggle-------//
     const $navMenu = $('.nav-menu')
@@ -65,42 +69,6 @@ $(()=>{
     })
     $skillsBackHeader.on('click', ()=>{
         $skillsBack.slideToggle(1000)
-    })
-
-    // ------------------------carousel------------------------//
-    let currentImgIndex = 0
-    const $numOfImages = $('#imgs-carousel').children().length - 1
-    const $content = $('#imgs-carousel').children()
-
-    //---- for previous button ---- //
-    $('#previous-button').on('click', ()=>{
-        $content.eq(currentImgIndex).css('display', 'none')
-
-        if (currentImgIndex > 0) {
-            currentImgIndex--
-        }else{
-            currentImgIndex = $numOfImages
-        }
-        $content.eq(currentImgIndex).css('display', 'block')
-    })
-
-    $('#next-button').on('click', ()=>{
-        $content.eq(currentImgIndex).css('display', 'none')
-
-        if (currentImgIndex < $numOfImages) {
-            currentImgIndex++
-        }else{
-            currentImgIndex = 0
-        }
-        $content.eq(currentImgIndex).css('display', 'block')
-    })
-
-    // --------for modal--------//
-    $('.open-modal').on('click', ()=>{
-        $('#modal').css('display', 'flex')
-    })
-    $('.close-modal').on('click', ()=>{
-        $('#modal').css('display', 'none')
     })
 
     // -------- dark mode -------//
