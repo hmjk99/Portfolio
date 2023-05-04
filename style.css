@@ -711,9 +711,9 @@ header{
     }
     /* ----------- about section ----------- */
     #about-p p, #fun-fact{
-        line-height: 1.85;
+        line-height: 2;
         font-size: var(--h3-font-size);
-        padding: 0.5rem 3rem 1rem
+        padding: 0.5rem 5rem 1rem
     }
     .title{
         margin-bottom: 2rem;
