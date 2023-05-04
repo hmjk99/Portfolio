@@ -413,16 +413,19 @@ header{
     width:95%;
 }
 .skills-js{
-    width:90%;
+    width:91%;
 }
 .skills-jquery{
-    width:90%;
+    width:93%;
 }
 .skills-react{
     width:90%;
 }
 .skills-next{
     width:90%
+}
+.skills-tail{
+    width:92%
 }
 #skills-back{
     display: none;
