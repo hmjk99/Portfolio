@@ -710,7 +710,7 @@ header{
         padding-bottom: 4rem
     }
     /* ----------- about section ----------- */
-    #about-p p, #fun-fact{
+    #about-p p, #fun-fact p{
         line-height: 2;
         font-size: var(--h3-font-size);
         padding: 0.5rem 5rem 1rem
