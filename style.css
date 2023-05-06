@@ -354,7 +354,8 @@ header{
     align-items: center;
     border-radius: 10px;
     box-shadow: 5px 5px 8px 5px var(--box-shadow);
-    margin: 2rem 1rem
+    margin: 2rem 1rem;
+    padding: 1rem
 }
 .skills-icon{
     height: 40px;
@@ -367,17 +368,61 @@ header{
 .skills-header{
     display: flex;
 }
-/* .skills-img{
-    width: 2rem;
-    height: 2rem;
-    object-fit: contain;
-    margin-right: 0.5rem;
-} */
+.skills-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .skills-detail{
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 7.5rem;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 2px var(--box-shadow);
 }
-
+.js{
+    background-color: #E7E6F7;
+}
+.jquery{
+    background-color: #DED9E2;
+}
+.react{
+    background-color: #E3D0D8;
+}
+.next{
+    background-color: #FEF9FF;
+}
+.tailwind{
+    background-color: #AEA3B0;
+}
+.html{
+    background-color: #B8BACF;
+}
+.css{
+    background-color: #EAE1DF;
+}
+.python{
+    background-color: #79ADDC;
+}
+.django{
+    background-color: #A1B5D8;
+}
+.node{
+    background-color: #D8E1E9;
+}
+.mongo{
+    background-color: #B3C5D7;
+}
+.express{
+    background-color: #B3C5D7;
+}
+.sql{
+    background-color: #7698B3;
+}
+/*  */
 
 
 
