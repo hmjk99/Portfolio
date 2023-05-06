@@ -136,7 +136,7 @@ header{
     left: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #4f416e;
+    background-color: #4f416e
 }
 .whole-nav{
     margin-left: 1rem;
@@ -348,106 +348,39 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
  }
 .skills-content{
-    margin-left: 15px; 
-}
-#skills-content-back{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.skills-header{
-    display:flex; 
-    margin-top: 10px;
-    margin-bottom: 30px; 
-    justify-content: space-between;
-    cursor: pointer;
-}
-.skills-right{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 5px var(--box-shadow);
+    margin: 2rem 1rem
 }
 .skills-icon{
     height: 40px;
-}
-.skills-detail{
-    margin: 0 1.8rem 1.5rem 2rem;
 }
 .skills-heading{
     margin: 5px 20px 0 15px;
     font-size: 1.2rem;
     color: var(--text-medium);
 }
-.skills-title{
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.skills-header{
+    display: flex;
 }
-.skills-arrow{
-    margin-right: 1.7rem;
-    height: 30px;
-    margin-top: 8px;
+/* .skills-img{
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    margin-right: 0.5rem;
+} */
+.skills-detail{
+    display: flex;
+    align-items: center;
 }
-.skills-name{
-    font-size: var(--h3-font-size);
-    margin: 0;
-    color: var(--text-black);
-}
-.skills-percent{
-    font-size: var(--normal-font-size);
-    height: 26.5px;
-    color: var(--text-black);
-}
-.skills-bar, .skills-fill{
-    height:5px;
-    border-radius: .25rem;
-}
-.skills-bar{
-    background-color: var(--lightest-color);
-}
-.skills-fill{
-    display: block;
-    background-color: #9080b4;
-}
-.skills-html{
-    width: 95%;
-}
-.skills-css{
-    width:95%;
-}
-.skills-js{
-    width:91%;
-}
-.skills-jquery{
-    width:93%;
-}
-.skills-react{
-    width:90%;
-}
-.skills-next{
-    width:90%
-}
-.skills-tail{
-    width:92%
-}
-#skills-back{
-    display: none;
-}
-.skills-python{
-    width:85%;
-}
-.skills-django{
-    width:85%;
-}
-.skills-node{
-    width:90%;
-}
-.skills-mongo{
-    width:85%;
-}
-.skills-express{
-    width:90%;
-}
-.skills-postgresql{
-    width:85%;
-}
+
+
+
+
 
 
 
