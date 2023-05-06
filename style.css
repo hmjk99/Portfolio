@@ -706,18 +706,19 @@ header{
 
     /* -------------skills section----------- */
     .skills-content{
-        margin: 0 2rem 3rem;
+        margin: 1rem 2rem 3rem;
     }
     .skills-heading{
         font-size: 1.35rem;
     }
-    .skills-name{
-        font-size: var(--h2-font-size);
+    .skills-detail{
+        width: 9rem;
+        height: 4rem;
+        margin: 1.5rem;
     }
-    .skills-percent{
-        font-size: 1rem;
+    .skills-info{
+        margin-top: 1.5rem;
     }
-
     /* ------------- projects section ------- */
     .project-img, .project-descrip{
         margin: 0 1.5rem 4rem;
@@ -808,22 +809,25 @@ header{
     .skills-content{
         margin: 2.5rem 4rem;
     }
-    .skills-detail{
-        margin: 2.5rem;
-    }
-    .skills-bar, .skills-fill{
-        height:7px;
-        border-radius: .25rem;
-    }
     .skills-heading{
         font-size: 1.5rem;
         margin-top:2px;
+    }
+    .skills-header{
+        margin-top: 2rem;
     }
     .skills-icon{
         font-weight: 700;
     }
     #skills-content-back{
         padding-bottom: 1.5rem;
+    }
+    .skills-detail{
+        width: 11rem;
+        height: 5rem;
+    }
+    .skills-detail h4{
+        font-size: 1.2rem;
     }
     /* ==================================== Projects Section =================================== */
     /* .project-img img{
@@ -850,13 +854,19 @@ header{
         padding: 2rem;
         line-height: 2;
     }
-    #about-p, #fun-fact{
+    #about-p, #fun-fact, .skills-content{
         width: 50rem;
         padding: 0
     }
     #Skills, #About{
         width: 75rem
     }
+    #Skills, #Projects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     body{
         display: flex;
         flex-direction: column;
